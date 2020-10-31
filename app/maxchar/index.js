@@ -6,8 +6,15 @@
 // maxChar("apple 1231111") === "1"
 
 function maxChar(str) {
-    let maxChar = '';
-    return maxChar;
+  var max = 0,
+    maxChar = "";
+  str.split("").forEach(function (char) {
+    if (str.split(char).length > max) {
+      max = str.split(char).length;
+      maxChar = char;
+    }
+  });
+  return maxChar;
 }
 
 module.exports = maxChar;
