@@ -13,20 +13,24 @@
 //   buzz
 
 function fizzBuzz(n) {
+  const resp = [];
   for (let i = 1; i <= n; i++) {
     if (i % 3 === 0 && i % 5 === 0) {
       console.log("fizzbuzz");
+      resp.push({num: i, val: "fizzbuzz"})
       continue
     } else if (i % 3 === 0) {
+      resp.push({num: i, val: "fizz"})
       console.log("fizz");
       continue
     } else if (i % 5 === 0) {
+      resp.push({num: i, val: "buzz"})
       console.log("buzz");
       continue
     }
+    resp.push({num: i, val: i})
     console.log(i);
   }
-  const resp = [];
   //resp = [{num: x, val: y}]
   return resp;
 }
